@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Achivement {
+  year: Int
+  title: String
+  position: Int
+}
+
+type Judoka {
+  name: String!
+  age: Int
+  club: String
+  achivements: [Achivement!]
+}
+
+type Query {
+  """Retorna un hola mundo"""
+  hello: String!
+
+  """retorna un numero aleatorio"""
+  random: Float!
+
+  """retorna un numero aleatorio entreo 0 hasta el x"""
+  randomTo(to: Int): Int!
+  judoka(id: Int!): Judoka!
+}
